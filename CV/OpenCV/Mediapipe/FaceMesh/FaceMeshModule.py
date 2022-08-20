@@ -2,9 +2,15 @@ import cv2
 import mediapipe as mp
 import time
 
+import numpy as np
+
 
 class MpFaceMesh:
-    def __init__(self, max_faces=1, min_threshold=0.5, thickness=1, circle_radius=1, color=[255, 0, 0]) -> None:
+    def __init__(self, max_faces=1,
+                 min_threshold=0.5,
+                 thickness=1,
+                 circle_radius=1,
+                 color=[255, 0, 0]) -> None:
         self.max_faces = max_faces
         self.min_threshold = min_threshold
         self.thickness = thickness
@@ -21,7 +27,7 @@ class MpFaceMesh:
             min_detection_confidence=self.min_threshold
         )
 
-    def find_mesh(self, frame, points_draw=True):
+    def find_mesh(self, frame, points_draw=True) -> np.ndarray:
         h, w, c = frame.shape
         frameRGB = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         rezults = self.faceMesh.process(frameRGB)
@@ -39,6 +45,7 @@ class MpFaceMesh:
                     connections=self.mp_face_mesh.FACEMESH_TESSELATION,
                     landmark_drawing_spec=self.draw_spec,
                     connection_drawing_spec=self.draw_spec)
+        print(type(frame))
         return frame
 
 

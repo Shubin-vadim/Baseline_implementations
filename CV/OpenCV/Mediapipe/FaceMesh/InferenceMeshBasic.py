@@ -32,8 +32,8 @@ while True:
             for i in range(0, 468):
                 x = int(face_landmarks.landmark[i].x * w)
                 y = int(face_landmarks.landmark[i].y * h)
-                cv2.circle(frame, (x,y), 2, (255,0,255),-1)
-                print(x,y)
+                cv2.circle(frame, (x, y), 2, (255,0,255),-1)
+                print(x, y)
             # mp_drawing.draw_landmarks(
             #     image=frame,
             #     landmark_list=face_landmarks,
