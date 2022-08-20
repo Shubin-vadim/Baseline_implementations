@@ -1,4 +1,4 @@
-# Baseline_implementations
+# Baseline implementations
 Implementation of basic solutions for various tasks
 
 1. Computer Vision
@@ -9,3 +9,4 @@ Implementation of basic solutions for various tasks
                
 2. NLP
 3. Style transfer
+4. Other
