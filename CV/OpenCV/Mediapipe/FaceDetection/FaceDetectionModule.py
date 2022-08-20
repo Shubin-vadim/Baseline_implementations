@@ -34,11 +34,11 @@ class MpFaceDetector:
         return frame, score, bbox
 
 
-def face_detection(webcam=True) -> None:
+def face_detection(webcam=False) -> None:
     cap = cv2.VideoCapture(0)
     detector = MpFaceDetector()
     if not webcam:
-        img = cv2.imread("test.jpg")
+        img = cv2.imread("../test.jpg")
         img = cv2.resize(img, (512, 512))
         img, score, bboxes = detector.find_faces(frame=img)
         cv2.imshow("output", img)
