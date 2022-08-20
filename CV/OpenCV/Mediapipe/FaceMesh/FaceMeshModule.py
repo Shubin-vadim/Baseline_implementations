@@ -44,17 +44,18 @@ class MpFaceMesh:
 
 def face_mesh(webcam=True) -> None:
     cap = cv2.VideoCapture(0)
-    detector = MpFaceMesh()
     if not webcam:
+        detector = MpFaceMesh(max_faces=5)
         img = cv2.imread("../test.jpg")
         img = cv2.resize(img, (512, 512))
-        img = detector.find_faces(frame=img)
+        img = detector.find_mesh(frame=img)
         cv2.imshow("output", img)
         cv2.waitKey(0)
         exit()
     if not cap.isOpened():
         print("Video camera not found")
         exit()
+    detector = MpFaceMesh(max_faces=1)
     pTime = 0
     while True:
         succes, frame = cap.read()
