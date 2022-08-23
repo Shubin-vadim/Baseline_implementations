@@ -8,6 +8,8 @@ Implementation of basic solutions for various tasks
             2. [FaceMesh](https://github.com/Shubin-vadim/Baseline_implementations/tree/master/CV/OpenCV/Mediapipe/FaceMesh)
             3. [Hand Tracking](https://github.com/Shubin-vadim/Baseline_implementations/tree/master/CV/OpenCV/Mediapipe/HandTracking)
             4. [Pose Estimator](https://github.com/Shubin-vadim/Baseline_implementations/tree/master/CV/OpenCV/Mediapipe/PoseEstimation)
+            5. [Holistic](https://github.com/Shubin-vadim/Baseline_implementations/tree/master/CV/OpenCV/Mediapipe/Holistic)
+            6. [Objectron](https://github.com/Shubin-vadim/Baseline_implementations/tree/master/CV/OpenCV/Mediapipe/Objectron)
     * Сompetitions
          + Kaggle
             1. HuBMAP + HPA - Hacking the Human Body
