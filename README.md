@@ -17,3 +17,8 @@ Implementation of basic solutions for various tasks
 2. NLP
 3. Style transfer
 4. Other
+
+# License
+
+Citing 
+Baseline implementations by Mediapipe and OpenCV is released under the [MIT license](https://en.wikipedia.org/wiki/MIT_License).
